@@ -8,9 +8,60 @@
     <link rel="stylesheet" href="../sass/index.css">
     <link rel="stylesheet" href="../css/common.css">
 
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.min.css">
+
+
     <script src="../js/index.js"></script>
 
     <script src="../lib/jquery/dist/jquery.min.js"></script>
+
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            background-position: center top;
+            background-repeat: no-repeat;
+            height: 350px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-button-prev {
+            left: 170px;
+        }
+
+        .swiper-button-next {
+            right: 170px;
+        }
+
+        .swiper-pagination-bullet {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+
 
 </head>
 
@@ -26,17 +77,17 @@
                             <a href="./register.html" rel="nofollow">注册</a>
                         </span>
                         <div class="head_nav_div">
-                            <a href="">我的好乐买</a>
+                            <a class="head_nav_div_a" href="">我的好乐买</a>
                             <span></span>
                             <div class="head_nav_div_div">
                                 <p><a href="">我的订单</a></p>
                                 <p><a href="">我的收藏</a></p>
-                                <p><a href="">我的优惠券</a></p>
+                                <p><a href="">我的优惠券</a></p> 
                             </div>
                         </div>
                         <i>|</i>
                         <div class="head_nav_div">
-                            手机好乐买
+                            <a class="head_nav_div_a" href="">手机好乐买</a>
                             <span></span>
                             <div class="head_nav_div_div">
                                 <img src="../images/appqcode_2.png">
@@ -45,7 +96,7 @@
                         </div>
                         <i>|</i>
                         <div class="head_nav_div">
-                            关注好乐买
+                            <a class="head_nav_div_a" href="">关注好乐买</a>
                             <span></span>
                             <div class="head_nav_div_div">
                                 <div>
@@ -55,7 +106,7 @@
                         </div>
                         <i>|</i>
                         <div class="head_nav_div">
-                            <a href="">客户服务</a>
+                            <a href="" class="head_nav_div_a">客户服务</a>
                             <span></span>
                             <div class="head_nav_div_div">
                                 <p><a href="">联系客服</a></p>
@@ -65,7 +116,7 @@
                         </div>
                         <i>|</i>
                         <div class="head_nav_div">
-                            公告
+                            <a href="" class="head_nav_div_a">公告</a>
                             <span></span>
                             <div class="head_nav_div_div noticeDiv">
                                 <!-- 渲染 -->
@@ -558,41 +609,30 @@
 
     <!-- 轮播 -->
     <div class="mainSlide" id="mainSlide">
-        <div id="topslide">
-            <div class="cell">
-                <div class="prom" style="background-image:url(../images/9bdb541c5f8e55bc1c60c7ab01f2d48d.png);">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                    style="background-image: url(http://i.okaybuy.cn/static/5d2b544954fe5d92ac2da2a9530b75fb.jpg);">
                 </div>
-                <div class="w1200"> <a href="" class="promLink"></a></div>
-            </div>
-            <div class="cell">
-                <div class="prom" style="background-image:url(../images/2ee1c22b612df19cccd634e5dd7eb3cb.png);">
+                <div class="swiper-slide"
+                    style="background-image: url(http://i.okaybuy.cn/static/9a4f4d1f5440ba3c0c94a3bca72cf36e.jpg);">
                 </div>
-                <div class="w1200"> <a href="" class="promLink"></a></div>
-            </div>
-            <div class="cell">
-                <div class="prom" style="background-image:url(../images/20b0592491a15b6cb584cf804c04e4c3.png);">
+                <div class="swiper-slide"
+                    style="background-image: url(http://i.okaybuy.cn/static/e02b9cfc04af5dce9292f3012dfa0778.jpg);">
                 </div>
-                <div class="w1200"> <a href="" class="promLink"></a></div>
-            </div>
-            <div class="cell">
-                <div class="prom" style="background-image:url(../images/f8a7ac0e24fc9d59be929380c4cce398.png);">
+                <div class="swiper-slide"
+                    style="background-image: url(http://i.okaybuy.cn/static/90c50168594495edf43d1eb42b0b20c7.jpg);">
                 </div>
-                <div class="w1200"> <a href="" class="promLink"></a></div>
-            </div>
-            <div class="cell cur">
-                <div class="prom" style="background-image:url(../images/8dc528b75a56bc4f84107ea10e00672a.png);">
+                <div class="swiper-slide"
+                    style="background-image: url(http://i.okaybuy.cn/static/451d5cae84afae4a1c1b26a5bfee52c3.jpg);">
                 </div>
-                <div class="w1200"> <a href="" class="promLink"></a></div>
             </div>
-            <div class="w1200 pgWidth">
-                <span class="slideNum" id="slideNum">
-                    <i class=""></i>
-                    <i class=""></i>
-                    <i class=""></i>
-                    <i class=""></i>
-                    <i class="cur"></i>
-                </span>
-            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
     <!-- 轮播 -->
@@ -742,6 +782,24 @@
                  <a href="">津ICP备16005872号-1</a> 京公网安备110105006859   </div>
         </div>
     </footer>
+
+    <script src="../lib/swiper/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            cssMode: true,
+            loop: true, // 循环模式选项
+            autoplay: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination'
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
 </body>
 
 </html>

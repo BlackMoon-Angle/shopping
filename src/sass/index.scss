@@ -94,6 +94,10 @@ header {
                             transition: color .3s linear;
                         }
 
+                        .head_nav_div_a:hover {
+                            color: #d70057;
+                        }
+
                         span {
                             background: url(../images/section-tigger.png) -30px -37px no-repeat;
                             width: 11px;
@@ -264,6 +268,30 @@ header {
                             font-size: 14px;
                             font-family: 'Microsoft Yahei';
                         }
+
+                        .head_section3_nav_a1 {
+                            transition: color .3s linear;
+                        }
+
+                        .head_section3_nav_a1:hover {
+                            color: #d70057;
+                        }
+
+                        .head_section3_nav_a2 {
+                            transition: color .3s linear;
+                        }
+
+                        .head_section3_nav_a2:hover {
+                            color: #d70057;
+                        }
+
+                        .head_section3_nav_a3 {
+                            transition: color .3s linear;
+                        }
+
+                        .head_section3_nav_a3:hover {
+                            color: #d70057;
+                        }
                     }
 
                     .head_section3_nav_div {
@@ -310,6 +338,12 @@ header {
                                     font-size: 12px;
                                     font-weight: bold;
                                     color: #D20D33;
+
+                                    a {
+                                        font-size: 12px;
+                                        font-weight: bold;
+                                        color: #D20D33;
+                                    }
                                 }
 
                                 .catewrap {
@@ -336,6 +370,11 @@ header {
                                             *line-height: 14px;
                                             color: #5E5E5E;
                                             overflow: hidden;
+                                            transition: color .3s linear;
+                                        }
+
+                                        a:hover {
+                                            color: #d70057;
                                         }
 
                                         .cateitem {
@@ -488,6 +527,7 @@ header {
         width: 1220px;
 
         ul {
+
             li {
                 float: left;
                 margin-right: 10px;
@@ -558,12 +598,19 @@ header {
                         color: #666;
 
                         span {
+
                             i {
+                                font-style: normal;
                                 color: #d70057;
                                 padding: 0 2px;
+
                             }
                         }
                     }
+                }
+
+                a:hover {
+                    border: 1px solid #d70057;
                 }
             }
         }
@@ -625,10 +672,15 @@ header {
                         color: #666;
 
                         i {
+                            font-style: normal;
                             color: #d70057;
                             padding: 0 2px;
                         }
                     }
+                }
+
+                a:hover {
+                    border: 1px solid #d70057;
                 }
             }
         }

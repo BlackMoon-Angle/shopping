@@ -50,7 +50,7 @@ window.onload = function () {
                 $('#list2in_ul').html(str);
             }
             shopTime();
-            setInterval(shopTime, 1000);
+            setInterva(shopTime, 1000);
         }
     })
 
@@ -61,8 +61,8 @@ window.onload = function () {
         cache: false,
         dataType: 'json',
         success: function (res3) {
-            
-            function shopTime2(){
+
+            function shopTime2() {
                 let str = '';
 
                 res3.res.forEach(item => {
@@ -102,18 +102,29 @@ window.onload = function () {
                 $('#list3in_ul').html(str);
             }
             shopTime2();
-            setInterval(shopTime2, 1000);
+            setInterva(shopTime2, 1000);
         }
     })
-}
 
-//定时器倒计时
-// function shopTime(times) {
-//     var et = new Date(times);
-//     var nt = new Date();
-//     var ct = parseInt((et.getTime() - nt.getTime()) / 1000);//时间差
-//     var day = parseInt(ct / (60 * 60 * 24));//天
-//     var hour = parseInt(ct / (60 * 60) % 24);//时
-//     var min = parseInt(ct / 60 % 60);//分
-//     var s = parseInt(ct % 60);//秒
-// }
+    //导航菜单，二级菜单
+    twoList()
+    twoList_list()
+    function twoList() {
+        $('.hassub')
+            .on({
+                mouseenter: function () {
+                    $(".head_section3_nav_div").eq($(this).index() - 1).css("display", "block")
+                },
+                mouseleave: function () {
+                    $('.head_section3_nav_div').css("display", "none")
+                }
+            })
+    }
+    function twoList_list() {
+        $('.head_section3_nav_div')
+            .on({
+                mouseover: function () { $(this).css("display", "block") },
+                mouseout: function () { $(this).css("display", "none") }
+            })
+    }
+}
