@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="../lib/swiper/css/swiper.min.css">
 
+    <link rel="stylesheet" href="../lib/pagination/pagination.css">
 
     <script src="../js/list.js"></script>
 
@@ -87,7 +88,7 @@
                     </span>
                     <form action="">
                         <input class="head_section2_div_form_input" type="text" x-webkit-grammar="builtin:translate"
-                            x-webkit-speech="" data-default="秋季新品" value="秋季新品" name="top_key">
+                            x-webkit-speech="" data-default="秋季新品" value="秋季新品" name="top_key" style="text-align: left;">
                         <input type="button" class="head_section2_div_form_input2" title="搜索" value="">
                     </form>
                     <span class="head_section2_div_span2">
@@ -930,11 +931,11 @@
                         <div class="pro-tab">
                             <!--排序参数-->
                             <!-- END -->
-                            <a href="" name="sort" class="ordby_pr cur up"
+                            <a  name="sort" class="ordby_pr cur up"
                                 val="filter_value_key_score_topic_ids_asc">默认</a>
-                            <a href="" name="sort" class="ordby_pr " val="price_terminal_1_asc">价格<i></i></a>
-                            <a href="" name="sort" class="ordby_pr " val="sale_number_desc">销量<i></i></a>
-                            <a href="" name="sort" class="ordby_pr " val="sale_date_desc">最新</a>
+                            <a  name="sort" class="ordby_pr sort" val="price_terminal_1_asc" style="cursor:pointer">价格<i></i></a>
+                            <a  name="sort" class="ordby_pr " val="sale_number_desc">销量<i></i></a>
+                            <a  name="sort" class="ordby_pr " val="sale_date_desc">最新</a>
                         </div>
                         <span class="propage-info">
                             <!--页码跳转参数-->
@@ -946,9 +947,9 @@
                             <!--之前start-->
 
                             <a id="next_page_a" page_num="2" href="" class="next"><i></i></a>
-                            <span class="page-text"><b>1</b>/6页</span>
+                            <span class="page-text"><b>1</b>/3页</span>
                             <a href="" class="prev disabled"><i></i></a>
-                            <span class="pro-number">共找到<em>209</em> 个商品</span>
+                            <span class="pro-number">共找到<em>24</em> 个商品</span>
 
                             <!--之前end-->
                         </span>
@@ -957,68 +958,39 @@
                     <!-- 商品列表 -->
                     <div class="ztlistwai">
                         <div class="w1200" style="overflow: hidden;">
-                            <div style="width: 1250px;">
-                                <div class="zt_25_lineY"></div>
-                                <div class="zt_25_list">
-                                    <a href="" title="李宁-全掌气垫透气一体织休闲鞋-杏色/卡其色-AGCM114-1" target="_blank">
-                                        <img src="http://0.image.al.okbuycdn.com/nbn/s270_270/static/239e1e4353ef75b09db4d44540d8d063.jpg"
-                                            alt="李宁-全掌气垫透气一体织休闲鞋-杏色/卡其色-AGCM114-1" class="zt_25_img">
-                                    </a>
-                                    <span class="zt_25_logobg">
-                                        <span class="BLB">
-                                            <img
-                                                src="http://0.image.al.okbuycdn.com//nbn/l72_50_detect/static/14ff119a643db529a889fd00d59b8776.jpg">
-                                        </span>
-                                    </span>
-                                    <a href="" class="zt_25_link zt_25_link_a" title="李宁-全掌气垫透气一体织休闲鞋-杏色/卡其色-AGCM114-1"
-                                        target="_blank">李宁 女式 全掌气垫透气一体织休闲鞋</a>
-                                    <span class="zt_25_link">¥
-                                        <span id="17626494" class="zt_25_pr">109</span>
-                                        <i>
-                                            <span>499</span>
-                                        </i>
-                                    </span>
-                                </div>
-                                <div class="zt_25_lineX"></div>
+                            <div class="shopList" style="width: 1250px;">
+                                <!-- 渲染 -->
                             </div>
                         </div>
                     </div>
+                    <!-- 商品列表 -->
                 </div>
 
+                <!-- 分页 -->
                 <div class="w1200">
-                    <div class="prolist-page">
-                        <span class="propage-num">
-                            <a class="current">1</a>
-                            <a href="/topic/show/92301?&amp;per_page=2" data-ci-pagination-page="2">2</a>
-                            <a href="/topic/show/92301?&amp;per_page=3" data-ci-pagination-page="3">3</a>
-                            <span>...</span>
-                            <a href="/topic/show/92301?&amp;per_page=6" data-ci-pagination-page="6">6</a><a
-                                href="/topic/show/92301?&amp;per_page=2" data-ci-pagination-page="2" rel="next">下一页</a>
-                        </span>
-
-                        <span class="propage-skip">
-                            <em>共6页&nbsp;&nbsp;到第</em>
-                            <input class="input-txt" name="per_page" onkeyup="value=value.replace(/[^\d]/g,'')">
-                            <em>页</em>
-                            <a class="propage-btn" id="propage-btn">确定</a>
-                        </span>
+                    <div class="prolist-page" style="display: flex;justify-content: center;align-items: center;">
+                        <div class="M-box3 m-style"></div>
                     </div>
                 </div>
+                <!-- 分页 -->
             </section>
         </article>
         <!-- 底部广告 -->
         <div class="addMoreTop" style="text-align: center;">
-            <img style="display: inline-block;" src="http://i.okaybuy.cn/images/multipic/new/201302/32/3219b6519b8f4e01a231fa01f135c18b.gif">
+            <img style="display: inline-block;"
+                src="http://i.okaybuy.cn/images/multipic/new/201302/32/3219b6519b8f4e01a231fa01f135c18b.gif">
         </div>
         <div style="text-align: center;">
             <a href="" target="_blank">
-                <img style="display: inline-block;" src="http://i.okaybuy.cn/static/7551611eae5e3028851055ed01973634.png" width="1200" height="150"
+                <img style="display: inline-block;"
+                    src="http://i.okaybuy.cn/static/7551611eae5e3028851055ed01973634.png" width="1200" height="150"
                     border="0">
             </a>
         </div>
         <div style="text-align: center;">
             <a href="http://www.okbuy.com" target="_blank">
-                <img style="display: inline-block;" src="http://i.okaybuy.cn/static/bfd6fa1ad6e15a36477821b5b3887a98.png" width="1200" height="50"
+                <img style="display: inline-block;"
+                    src="http://i.okaybuy.cn/static/bfd6fa1ad6e15a36477821b5b3887a98.png" width="1200" height="50"
                     border="0">
             </a>
         </div>
@@ -1091,6 +1063,8 @@
             </div>
         </footer>
     </main>
+
+    <script src="../lib/pagination/pagination.js"></script>
 </body>
 
 </html>

@@ -32,7 +32,7 @@ window.onload = function () {
 
                     str += `
                    <li>
-                        <a href="${item.link}" target="_blank">
+                        <a href="../pages/list.html" target="_blank">
                             <img src="${item.img}" alt="">
                             <span class="tit1">${item.title}</span>
                             <span class="tit2">${item.slogan}</span>
@@ -50,7 +50,7 @@ window.onload = function () {
                 $('#list2in_ul').html(str);
             }
             shopTime();
-            setInterva(shopTime, 1000);
+            setInterval(shopTime, 1000);
         }
     })
 
@@ -76,7 +76,7 @@ window.onload = function () {
                     var s = parseInt(ct % 60);//秒
                     str += `
                     <li>
-                        <a href="${item.link}" target="_blank">
+                        <a href="../pages/list.html" target="_blank">
                             <img src="${item.img}">
                             <p class="list3tit1">${item.title}
                                 <span>${item.discount}</span>
@@ -102,7 +102,7 @@ window.onload = function () {
                 $('#list3in_ul').html(str);
             }
             shopTime2();
-            setInterva(shopTime2, 1000);
+            setInterval(shopTime2, 1000);
         }
     })
 
