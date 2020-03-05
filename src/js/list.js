@@ -24,6 +24,8 @@ window.onload = function () {
 
     //列表商品请求
     shopList();
+    //定义一个数组，用于接收json文件中的数据
+    let list_res = [];
     function shopList() {
         $.ajax({
             url: '../lib/list.json',
@@ -51,6 +53,9 @@ window.onload = function () {
                     }
                 });
 
+                //将list.json数据，传递给list_res
+                list_res = res;
+
                 //优先降第一页的数据渲染
                 HtmlList(res.slice(0, 8));
             }
@@ -63,7 +68,7 @@ window.onload = function () {
         list.forEach(item => {
             str += `
             <div data-id="${item.id}" class="zt_25_list" style="margin-bottom: 36px;margin-left: 24px;">
-                                    <a  title="" target="_blank">
+                                    <a class="jh_a"   title="" target="_blank">
                                         <img src="${item.img}"
                                             alt="" class="zt_25_img">
                                     </a>
@@ -86,10 +91,35 @@ window.onload = function () {
             $('.shopList').html(str);
         });
 
-        // 详细页跳转
-        // $('.shopList > div').click(function () {
-        //     console.log(this)
-        // })
+
+        //列表页详细页数据交互
+        $('.shopList > div').click(function () {
+
+            const DataId = $(this).data('id');//获取点击的div身上的id属性
+            
+            //请求详情页数据
+            $.ajax({
+                url:'../lib/detail.json',
+                dataType: 'json',
+                success: function (res){
+                    let data = null;
+
+                    for(let i = 0;i < res.length;i++){
+                        if(res[i].id == DataId){//如果id相同
+
+                            data = res[i];//接受数据
+
+                            break;//匹配后打断循环
+                        }
+                    }
+                    //将数据存储到localStorage
+                    localStorage.setItem('goodsInfo',JSON.stringify(data));
+
+                    //跳转页面到详情页
+                    window.location.href = '../pages/detail.html';
+                }
+            })
+        })
 
     }
 }

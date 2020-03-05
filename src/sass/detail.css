@@ -458,8 +458,37 @@ header article section:nth-of-type(3) nav ul .head_section3_nav_div .head_sectio
   background: #fff;
 }
 
-.prodConTop .pDetailLe .pBigPic img {
+.prodConTop .pDetailLe .pBigPic span img {
   width: 450px;
+}
+
+.prodConTop .pDetailLe .float_layer {
+  pointer-events: none;
+  display: none;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: .4;
+  position: absolute;
+}
+
+.prodConTop .pDetailLe .big_box {
+  pointer-events: none;
+  display: none;
+  position: absolute;
+  left: 453px;
+  top: -60px;
+  width: 500px;
+  height: 550px;
+  z-index: 9900;
+  background-color: red;
+  overflow: hidden;
+}
+
+.prodConTop .pDetailLe .big_box img {
+  width: 900px;
+  height: 900px;
+  position: absolute;
 }
 
 .prodConTop .pDetailLe .pBidPic375 {

@@ -10,6 +10,21 @@ window.onload = function () {
         }
     })
 
+    //商标列表
+    $.ajax({
+        url: '../lib/index.json',
+        dataType: 'json',
+        success: function (res) {
+            let str = '';
+            res.forEach(item => {
+                str +=`
+                <a href="javascript:void(0);"><img src="${item.img}" alt="${item.alt}"></a>
+                `
+            })
+            $('.brandinin').html(str);
+        }
+    })
+
     //第一商品列表渲染
     $.ajax({
         url: '/shopList',

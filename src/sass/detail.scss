@@ -462,8 +462,41 @@ header {
             text-align: center;
             background: #fff;
 
+            span {
+                img {
+                    width: 450px;
+                }
+            }
+        }
+
+        // 遮罩层
+        .float_layer {
+            pointer-events: none;
+            display: none;
+            width: 200px;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: .4;
+            position: absolute;
+        }
+
+        // 放大镜投影
+        .big_box {
+            pointer-events: none;
+            display: none;
+            position: absolute;
+            left: 453px;
+            top: -60px;
+            width: 500px;
+            height: 550px;
+            z-index: 9900;
+            background-color: red;
+            overflow: hidden;
+
             img {
-                width: 450px;
+                width: 900px;
+                height: 900px;
+                position: absolute;
             }
         }
 
@@ -932,6 +965,7 @@ header {
                 color: #999;
                 background: url(http://0.js.al.okbuycdn.com/resources/images/v6/product/detail/pronotic.png) top left no-repeat;
             }
+
             .okbuyservice {
                 padding: 10px 0 10px 76px;
                 width: 630px;
