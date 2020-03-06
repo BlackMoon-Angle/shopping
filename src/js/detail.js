@@ -129,11 +129,11 @@ window.onload = function () {
             //商品主视图底部列表图
             if (info.mi.length <= 4) {
                 //屏蔽多余的td
-                $('.mi_IMG5').css('display','none');
-                $('.mi_IMG6').css('display','none');
-                $('.mi_IMG7').css('display','none');
-                $('.mi_IMG8').css('display','none');
-                $('.mi_IMG9').css('display','none');
+                $('.mi_IMG5').css('display', 'none');
+                $('.mi_IMG6').css('display', 'none');
+                $('.mi_IMG7').css('display', 'none');
+                $('.mi_IMG8').css('display', 'none');
+                $('.mi_IMG9').css('display', 'none');
 
                 $('.mi_IMG1').attr('rel', info.mi[0].MaxImg);
                 $('.mi_IMG1 > img').attr('src', info.mi[0].MaxImg);
@@ -148,11 +148,11 @@ window.onload = function () {
                 $('.mi_IMG4 > img').attr('src', info.mi[3].MaxImg);
             }
             if (info.mi.length > 4) {
-                $('.mi_IMG5').css('display','block');
-                $('.mi_IMG6').css('display','block');
-                $('.mi_IMG7').css('display','block');
-                $('.mi_IMG8').css('display','block');
-                $('.mi_IMG9').css('display','block');
+                $('.mi_IMG5').css('display', 'block');
+                $('.mi_IMG6').css('display', 'block');
+                $('.mi_IMG7').css('display', 'block');
+                $('.mi_IMG8').css('display', 'block');
+                $('.mi_IMG9').css('display', 'block');
 
                 $('.mi_IMG1').attr('rel', info.mi[0].MaxImg);
                 $('.mi_IMG1 > img').attr('src', info.mi[0].MaxImg);
@@ -194,7 +194,7 @@ window.onload = function () {
         $('.zk').text(info.zk);
 
         // 商品选择
-        $('.a_color > img').attr('src',info.mi[0].MaxImg);
+        $('.a_color > img').attr('src', info.mi[0].MaxImg);
 
         // 尺码
         $('.size1').text(info.size1);
@@ -205,6 +205,47 @@ window.onload = function () {
         $('.size6').text(info.size6);
         $('.size7').text(info.size7);
         $('.size8').text(info.size8);
+
+
+        //详细页与购物车页交互
+        buy();
+        function buy() {
+            $('.prodCartBtn').click(function () {
+
+                //先拿到数据，如果不存在数据，就用一个空数组代替
+                const cartList = JSON.parse(localStorage.getItem('cartList')) || [];
+
+                //判断数据是否存在
+                let exits = cartList.some(item => {
+                    return item.id == info.id
+                })
+
+                if (exits) {
+
+                    let data = null;
+
+                    for (let i = 0; i < cartList.length; i++) {
+                        if (cartList[i].id == info.id) {
+                            data = cartList[i];
+                            break;
+                        }
+                    }
+                    //商品存在，如果持续点击添加购物车，则改变number数据
+                    data.number++;
+
+                    data.Allmoney = data.number * data.Bmoney;//总价格
+                }
+                else {
+                    //如果不存在，则为数据添加number,总价格等属性做记录
+                    info.number = 1;
+                    info.Allmoney = info.Bmoney;
+                    info.isSelect = false//默认不选中
+                    cartList.push(info);
+                }
+
+                localStorage.setItem('cartList',JSON.stringify(cartList));
+            })
+        }
 
     }
 }

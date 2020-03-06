@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>详情页</title>
-    <link rel="stylesheet" href="../css/common.css">
+    <title>购物车</title>
 
-    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/payment.css">
 
     <script src="../lib/jquery/dist/jquery.min.js"></script>
 
-    <script src="../js/detail.js"></script>
+    <script src="../js/payment.js"></script>
+
 </head>
 
 <body>
@@ -556,292 +557,97 @@
         </article>
     </header>
 
-    <div class="prodConTop">
-        <div class="prodConTopIn">
-            <!-- 头部介绍文字 -->
-            <div class="prodConTopInTit">
-                <p>
-                    <span>
-                        <a class="headText1" href="javascript:void(0)"></a>
-                    </span>
-                    &gt;&nbsp;<a class="headText2" href="javascript:void(0)"></a>
-                    &gt;&nbsp;<a class="headText3" href="javascript:void(0)"></a>
-                    &gt;&nbsp;<a class="headText4" href="javascript:void(0)"></a>
-                    &gt;&nbsp;<a class="headText5" href="javascript:void(0)"></a>
+    <main class="main_box w1200 cartcen">
+        <div class="carttit">
+            <h1>我的购物车</h1><span style="color:#d70057"></span>
+            <div class="zero w1200"></div>
+        </div>
+    </main>
+
+    <main class="main_box2">
+        <div class="row">
+            <div class="col-md-1 car-menu col_all">
+                <!-- 渲染 -->
+            </div>
+            <div class="col-md-3 car-menu">商品信息</div>
+            <div class="col-md-1 car-menu">单价</div>
+            <div class="col-md-1 car-menu">数量</div>
+            <div class="col-md-1 car-menu">金额</div>
+            <div class="col-md-2 car-menu">操作</div>
+        </div>
+        <div id="shop_wrap">
+            <!-- 渲染 -->
+        </div>
+    </main>
+
+    <main class="main_box3">
+        <!-- 渲染 -->
+    </main>
+
+    <footer>
+        <div class="conn">
+            <div class="w1200">
+                <div class="qd">
+                    <div class="footer_code" style="margin-left: 90px;">
+                        <div class="wx_code" style="margin-right: 130px;">
+                            <img src="../images/code_client.png">
+                            <p>好乐买手机客户端</p>
+                        </div>
+                        <div class="wx_code">
+                            <img src="../images/code_public.jpg">
+                            <p>好乐买微信公众号</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="abm">
+                    <li>
+                        <p class="tit">购物指南</p>
+                        <p><a href="">购物流程</a></p>
+                        <p><a href="">订购方式</a></p>
+                        <p><a href="">常见问题</a></p>
+                        <p><a href="">隐私政策</a></p>
+                    </li>
+                    <li>
+                        <p class="tit">配送方式</p>
+                        <p><a href="">快递配送</a></p>
+                        <p><a href="">配送时间</a></p>
+
+                    </li>
+                    <li>
+                        <p class="tit">支付方式</p>
+                        <p><a href="">支付方式</a></p>
+                        <p><a href="">代金券</a></p>
+
+                    </li>
+                    <li>
+                        <p class="tit">售后服务 </p>
+                        <p><a href="">退换货规约</a></p>
+                        <p><a href="">退款说明</a></p>
+                        <p><a href="">联系客服</a></p>
+                    </li>
+                </ul>
+                <div class="OB_clearFix"></div>
+                <p class="center oklogo">
+                    <a href="">
+                        <img src="../images/okbuy1-03.png">
+                    </a>
+                    <a href="">
+                        <img src="../images/okbuy1-05.png">
+                    </a>
+                    <a href="">
+                        <img src="../images/902c39b52902b3bd4ab500babad4e14a.png" style="border:1px solid #ccc">
+                    </a>
+                    <a href="">
+                        <img src="../images/bjwj.jpg">
+                    </a>
+                </p>
+                <p class="about"><a href="">公司介绍</a> | <a href="">加入我们</a> | <a href="">联系我们</a> | <a href="">友情链接</a>
                 </p>
             </div>
-            <!-- 头部介绍文字 -->
-
-            <!-- 商品主视图 -->
-            <div class="pDetailLe" id="pDetailLe">
-                <div class="qqg"></div>
-                <input type="hidden" name="zoomPic" id="zoomPicFlag" value="">
-                <div class="pBigPic pBidPic375 small_box" imgorg="">
-                    <!-- 主盒子 -->
-                    <span class="mask"
-                        style="position: absolute;left: 0;bottom: 0;display: block;width: 450px;height: 450px;">
-                        <img class="MaxImg1" src="">
-                        <!-- 放大镜 -->
-                        <div class="float_layer" style=" left: 250px; top: 250px;"></div>
-                    </span>
-                </div>
-                <!-- 投影 -->
-                <div class="big_box">
-                    <img class="MaxImg1" src="" alt="">
-                </div>
-                <div class="prodConTopInLiImg">
-                    <table cellpadding="0" cellspacing="0" border="0" class="multi_view">
-                        <tbody>
-                            <tr class="Img_tbody_tr">
-                                <td class="multi_viewTd_1">
-                                    <a class="mi_IMG1" href="javascript:void(0)" class="" rel="">
-                                        <img width="49" height="49" border="0">
-                                        <span class="prodConTopInLiImgBor" style="display: block;"></span>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="mi_IMG2" href="javascript:void(0)" class="" rel="">
-                                        <img width="49" height="49" border="0">
-                                        <span class="prodConTopInLiImgBor" style="display: none;"></span>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="mi_IMG3" href="javascript:void(0)" class="" rel="">
-                                        <img width="49" height="49" border="0">
-                                        <span class="prodConTopInLiImgBor" style="display: none;"></span>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="mi_IMG4" href="javascript:void(0)" class="" rel="">
-                                        <img width="49" height="49" border="0">
-                                        <span class="prodConTopInLiImgBor" style="display: none;"></span>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="mi_IMG5" href="javascript:void(0)" class="" rel="">
-                                        <img width="49" height="49" border="0">
-                                        <span class="prodConTopInLiImgBor" style="display: none;"></span>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="mi_IMG6" href="javascript:void(0)" class="" rel="">
-                                        <img width="49" height="49" border="0">
-                                        <span class="prodConTopInLiImgBor" style="display: none;"></span>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="mi_IMG7" href="javascript:void(0)" class="" rel="">
-                                        <img width="49" height="49" border="0">
-                                        <span class="prodConTopInLiImgBor" style="display: none;"></span>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="mi_IMG8" href="javascript:void(0)" class="" rel="">
-                                        <img width="49" height="49" border="0">
-                                        <span class="prodConTopInLiImgBor" style="display: none;"></span>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="mi_IMG9" href="javascript:void(0)" class="" rel="">
-                                        <img width="49" height="49" border="0">
-                                        <span class="prodConTopInLiImgBor" style="display: none;"></span>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="prodWishSucces" style="display: none">
-                    <p id="prodWishSuccesIn"></p>
-                </div>
-            </div>
-            <!-- 商品主视图 -->
-
-            <!-- 商品介绍 -->
-            <div class="prodConDetail">
-
-                <!-- 商品名称 -->
-                <h1 class="prodAllName">
-                    <span class="fontbold">
-                        <a class="Title1" href="" style="color:#333" target="_blank"></a>
-                    </span>
-                    <a class="sex"></a>
-                    <span class="Title2" id="prodTitleName"></span>
-                    <span class="morebrand">更多<a href="" target="_blank">李宁</a>
-                    </span>
-                    <br>
-                    <span class="yaohe">
-                    </span>
-                </h1>
-                <!-- 商品名称 -->
-
-                <!-- 价格 -->
-                <div class="prodPriceLiJ">
-                    <div class="prodPrice">
-                        <div class="pricewrap clearfix" style="height: 49px;">
-                            <!--价格区start-->
-                            <div class="prodPriceLi">
-                                <span class="pricetxt">好乐买价</span><span class="colorred">¥
-                                    <span class="Bmoney" id="prodPriceAj"></span>
-                                </span>
-                                <!--如果是全球购商品不显市场价-->
-                                <span class="prodPriceLiJ_2 Smoney"></span>
-                            </div>
-                            <!--如果是全球购商品不显示折扣-->
-                            <div class="prodPriceLiZk">
-                                <span class="zk" id="prodDiscount"></span>
-                            </div>
-                            <!--价格区end-->
-                            <!--累计评价start-->
-                            <a class="totalcomment" href="#comment">
-                                <span class="cmtxt">累计评价</span>
-                                <span class="cmtnum">0</span>
-                            </a>
-                            <!--累计评价end-->
-                        </div>
-                    </div>
-                    <div class="prodhd" id="prodActivity" style="padding-top: 10px; padding-bottom: 11px;">
-                        <div class="activitywrap" style="padding: 0px;">
-                            <div class="prodH" style="padding-top: 0px;">活动</div>
-                            <div class="proactcon">
-                                <p><span class="prodicon">特价</span><span class="prodhdtext"><a href="/topic/show/92301"
-                                            target="_blank" style="color:#a46c01">李宁 鞋品特惠 &gt;&gt;</a></span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 价格 -->
-
-                <!-- 商品多样选择 -->
-                <div class="prodColor">
-                    <div class="prodH">颜色</div>
-                    <p class="prodColorImg">
-                        <a class="a_color">
-                            <img width="100%" height="100%">
-                        </a>
-                    </p>
-                </div>
-                <!-- 商品多样选择 -->
-
-                <!-- 商品尺码，结算 -->
-                <div class="prodConSize">
-                    <div class="prodH">
-                        尺码
-                        <a href="javascript:void(0)" id="showsizelist" rel="nofollow">
-                            尺码对照表 </a>
-                    </div>
-                    <ul class="selectSize clear" id="sizeList">
-                        <li>
-                            <p class="selectCurArea">
-                                <a rel="nofollow" name="sizeitem" href="javascript:;" class="">
-                                    <span class="text size1"></span>
-                                    <i></i>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="selectCurArea">
-                                <a rel="nofollow" name="sizeitem" href="javascript:;" class="">
-                                    <span class="text size2"></span>
-                                    <i></i>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="selectCurArea">
-                                <a rel="nofollow" name="sizeitem" href="javascript:;" class="">
-                                    <span class="text size3"></span>
-                                    <i></i>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="selectCurArea">
-                                <a rel="nofollow" name="sizeitem" href="javascript:;" class="">
-                                    <span class="text size4"></span>
-                                    <i></i>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="selectCurArea">
-                                <a rel="nofollow" name="sizeitem" href="javascript:;" class="">
-                                    <span class="text size5"></span>
-                                    <i></i>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="selectCurArea">
-                                <a rel="nofollow" name="sizeitem" href="javascript:;" class="">
-                                    <span class="text size6"></span>
-                                    <i></i>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="selectCurArea">
-                                <a rel="nofollow" name="sizeitem" href="javascript:;" class="">
-                                    <span class="text size7"></span>
-                                    <i></i>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="selectCurArea">
-                                <a rel="nofollow" name="sizeitem" href="javascript:;" class="">
-                                    <span class="text size8"></span>
-                                    <i></i>
-                                </a>
-                            </p>
-                        </li>
-                    </ul>
-                    <div class="prodH prodBuyNum" style="margin-top:0;">数量</div>
-                    <div style="display: inline-block;">
-                        <ul class="selectCount">
-                            <li><a href="javascript:void(0);" class="reduce" id="reduce">-</a></li>
-                            <li><span class="inputBorderBg"><input name="count" type="text"
-                                        class="inputClass inputNum inputNum_1" maxlength="1" id="buyAmount" value="1"
-                                        autocomplete="off"></span>
-                            </li>
-                            <li><a href="javascript:void(0);" class="add" id="add">+</a>
-                            </li>
-                        </ul>
-                        <span class="stocktit"></span>
-                    </div>
-                    <div class="cartopewrap">
-                        <!--购物车按钮start-->
-                        <div id="CartButton">
-                            <input type="button" class="prodCartBtn" id="prodCartBtn" value="加入购物车">
-                        </div>
-                        <!--购物车按钮end-->
-                        <!--收藏start-->
-                        <div id="prodWishBlock">
-                            <div class="prodWish">
-                                <a rel="nofollow" href="javascript:void(0);" class="labledialog">收藏该商品
-                                </a>
-                            </div>
-                        </div>
-                        <div id="prodWishSucces" style="display: none">
-                            <p id="prodWishSuccesIn"></p>
-                        </div>
-                        <!--收藏end-->
-                    </div>
-                    <div class="prodNotice" style="display: block;letter-spacing: 0px;">
-                        <p style="line-height: 1.5;text-align: justify;">
-                        </p>
-                    </div>
-                    <div class="okbuyservice">
-                        <a href="" target="_blank" title="正品保障" rel="nofollow"></a>
-                        <a href="" target="_blank" title="贴心服务" rel="nofollow"></a>
-                        <a href="" target="_blank" title="全场满259免邮" rel="nofollow"></a>
-                    </div>
-                </div>
-                <!-- 商品尺码，结算 -->
-            </div>
-            <!-- 商品介绍 -->
+            <div class="bt">天津好乐买信息技术有限公司 Copyright © 2007-2020 OkBuy.com All Rights Reserved  增值电信业务经营许可证：津B2-20140020
+                 <a href="">津ICP备16005872号-1</a> 京公网安备110105006859   </div>
         </div>
-    </div>
+    </footer>
 </body>
 
 </html>

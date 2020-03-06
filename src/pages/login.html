@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录</title>
 
-    <link rel="stylesheet" href="../sass/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/common.css">
+
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="../js/login.js"></script>
 
 </head>
 
@@ -47,10 +51,10 @@
                 </div>
                 <div class="login_new_tabbody">
                     <!-- 登录界面 -->
-                    <div class="loginbody ">
+                    <div class="loginbody login active2">
                         <p id="login_error_1" style="color:red;padding:5px 5px 5px 0;line-height:18px;"></p>
                         <div class="userLogin">
-                            <form id="loginform_name" name="loginform" action="" method="post">
+                            <form id="loginform_name" name="loginform" action="../lib/login.php" method="POST">
                                 <!-- 用户名 -->
                                 <div class="login_txt">
                                     <input type="text" title="" placeholder="已验证手机/邮箱/用户名" value="" class="valid"
@@ -72,13 +76,13 @@
                                         style="float:left">
                                 </p>
                                 <span class="loginPassBtn"></span>
-                                <p class="loginRight_3"><a href="">忘记密码？</a></p>
+                                <p class="loginRight_3"><a href="../pages/register.html" style="margin-left: 313px;">注册</a></p>
                             </form>
                         </div>
                     </div>
 
                     <!-- 扫码界面 -->
-                    <div class="loginbody active">
+                    <div class="loginbody login2">
                         <div class="scan_code">
                             <!-- 扫码 -->
                             <div class="havecode" style="display: block;">

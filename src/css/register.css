@@ -1,0 +1,310 @@
+body {
+  background: #fff;
+  font-family: Arial, SimSun, Helvetica, sans-serif;
+  color: #333;
+  font-size: 12px;
+}
+
+.head {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.head article:nth-of-type(1) {
+  float: left;
+}
+
+.head article:nth-of-type(2) {
+  float: right;
+  height: 100px;
+  line-height: 100px;
+  font-size: 14px;
+  font-family: 'Microsoft Yahei';
+  color: #666;
+}
+
+.head article:nth-of-type(2) span {
+  margin-left: 60px;
+}
+
+.head article:nth-of-type(2) span i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url(../images/ui_login.png) -76px -60px no-repeat;
+}
+
+.login_new_bg {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+}
+
+.login_new_bg img {
+  position: absolute;
+  left: 50%;
+  margin-left: -1000px;
+  vertical-align: top;
+}
+
+.main_box {
+  width: 1200px;
+  height: 560px;
+  margin: 0 auto;
+}
+
+.main_box .login {
+  width: 100%;
+  color: #676767;
+  font-size: 14px;
+  float: left;
+  display: inline;
+  zoom: 1;
+  background-position: 55px 20px;
+}
+
+.main_box .login .loginRight {
+  float: right;
+  position: relative;
+  width: 340px;
+  height: 520px;
+  margin: 20px 0 0 0;
+  padding: 0 30px;
+  background: #fff;
+}
+
+.main_box .login .loginRight .register_new_title {
+  overflow: hidden;
+  margin: 30px 0;
+  font-family: 'Microsoft Yahei';
+}
+
+.main_box .login .loginRight .register_new_title .reg {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.main_box .login .loginRight .register_new_title .reglogin {
+  float: right;
+  color: #d70057;
+}
+
+.main_box .login .loginRight .login_txt,
+.main_box .login .loginRight .login_txt_2,
+.main_box .login .loginRight .login_txt_3 {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.main_box .login .loginRight #mobileoremail {
+  position: relative;
+  width: 346px;
+  overflow: hidden;
+  height: 53px;
+}
+
+.main_box .login .loginRight #mobileoremail #mobilediv {
+  position: absolute;
+  left: 0;
+  top: 0;
+  float: left;
+  width: 346px;
+}
+
+.main_box .login .loginRight #mobileoremail #mobilediv .register_txt {
+  position: relative;
+  width: 337px;
+  height: 50px;
+}
+
+.main_box .login .loginRight #mobileoremail #mobilediv .register_txt input {
+  height: 46px;
+  width: 325px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background: #fff;
+  line-height: 46px;
+  margin-bottom: 13px;
+  padding-left: 10px;
+}
+
+.main_box .login .loginRight #mobileoremail #mobilediv .register_txt .deletemobile {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 19px;
+  cursor: pointer;
+}
+
+.main_box .login .loginRight .registererror {
+  height: 30px;
+  line-height: 30px;
+  color: #d00;
+  font-size: 12px;
+}
+
+.main_box .login .loginRight .registererror i {
+  font-style: normal;
+}
+
+.main_box .login .loginRight .registererror .p_reg_note {
+  display: none;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin: -1px 3px 0 0;
+}
+
+.main_box .login .loginRight .register_txt {
+  position: relative;
+  width: 337px;
+  height: 50px;
+}
+
+.main_box .login .loginRight .register_txt input {
+  height: 46px;
+  width: 325px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background: #fff;
+  line-height: 46px;
+  margin-bottom: 13px;
+  padding-left: 10px;
+}
+
+.main_box .login .loginRight .register_txt .show {
+  background: url(http://0.js.al.okbuycdn.com/resources/images/v6/login/pwicon.png) no-repeat;
+  width: 20px;
+  height: 38px;
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.main_box .login .loginRight .register_txt #true3 {
+  right: 34px;
+}
+
+.main_box .login .loginRight .register_txt .true {
+  float: left;
+  padding-left: 10px;
+  display: none;
+  position: absolute;
+  z-index: 2;
+  right: 16px;
+  top: 9px;
+}
+
+.main_box .login .loginRight #safe {
+  height: 30px;
+  line-height: 30px;
+}
+
+.main_box .login .loginRight .registercode {
+  width: 380px;
+  position: relative;
+  height: 53px;
+  overflow: hidden;
+}
+
+.main_box .login .loginRight .registercode .validateCodeDiv {
+  float: left;
+}
+
+.main_box .login .loginRight .registercode #validateCodeDiv_1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.main_box .login .loginRight .registercode #validateCodeDiv_1 .mobilecheck_3 {
+  overflow: hidden;
+  width: 340px;
+}
+
+.main_box .login .loginRight .registercode #validateCodeDiv_1 .mobilecheck_3 .mcback {
+  position: relative;
+  float: left;
+}
+
+.main_box .login .loginRight .registercode #validateCodeDiv_1 .mobilecheck_3 .mcback {
+  float: left;
+  background: 0;
+  border: 1px solid #e0e0e0;
+  padding: 0;
+  width: 174px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.main_box .login .loginRight .registercode #validateCodeDiv_1 .mobilecheck_3 .mcback input {
+  position: absolute;
+  z-index: 1;
+}
+
+.main_box .login .loginRight .registercode #validateCodeDiv_1 .mobilecheck_3 .mcback input {
+  width: 162px;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 10px;
+  font-size: 14px;
+  border: 0;
+}
+
+.main_box .login .loginRight .registercode #validateCodeDiv_1 .mobilecheck_3 .num {
+  width: 100px;
+  height: 52px;
+  font-size: 35px;
+  background-color: silver;
+  color: #d00;
+  border: 0;
+  font-style: initial;
+  float: left;
+  margin-left: 13px;
+}
+
+.main_box .login .loginRight .registercode #validateCodeDiv_1 .mobilecheck_3 .again {
+  float: right;
+  font-size: 12px;
+  margin-top: 39px;
+}
+
+.main_box .login .loginRight .registererror {
+  height: 30px;
+  line-height: 30px;
+  color: #d00;
+  font-size: 12px;
+}
+
+.main_box .login .loginRight .register_btn {
+  width: 338px;
+  height: 50px;
+  background: #d70057;
+  border: none;
+  cursor: pointer;
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Microsoft Yahei';
+  color: #fff;
+}
+
+.main_box .login .loginRight .school_check_P {
+  font-size: 12px;
+  color: #999;
+}
+
+.main_box .login .loginRight .school_check_P a {
+  color: #d70057;
+}
