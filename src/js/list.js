@@ -67,7 +67,7 @@ window.onload = function () {
         let str = '';
         list.forEach(item => {
             str += `
-            <div data-id="${item.id}" class="zt_25_list" style="margin-bottom: 36px;margin-left: 24px;">
+            <div data-id="${item.id}" class="zt_25_list" style="margin-bottom: 36px;margin-left: 24px;cursor:pointer;">
                                     <a class="jh_a"   title="" target="_blank">
                                         <img src="${item.img}"
                                             alt="" class="zt_25_img">

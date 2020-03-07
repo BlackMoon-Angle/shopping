@@ -111,6 +111,7 @@ window.onload = function () {
         //按钮事件
 
         function bindEvent() {
+            
             //全选按钮的事件
             $('body').on('change', '#check-goods-all', function () {
                 //当全选按钮被选上时
@@ -191,24 +192,17 @@ window.onload = function () {
                 const id = $(this).data('id');
 
                 //从数据中，匹配到id相同的数据，进行删除
-                for (let item of cartList) {
+                cartList.forEach(item => {
                     if (item.id == id) {
-                        var ls_list = JSON.parse(localStorage.getItem('cartList'));//获取数组
-                        ls_list.splice(item.index, 1);
-
-                        console.log(ls_list)
-                        break;
+                        cartList.splice(item.index,1)
                     }
+                })
 
-                }
-
-                // //重新渲染页面
+                //重新渲染页面
                 binHtml();
 
-                // // //重新储存数据，防止页面刷新的时候，重置按钮
-                localStorage.setItem('cartList', JSON.stringify(ls_list));
-
-                buy_pay();
+                //重新储存数据，防止页面刷新的时候，重置按钮
+                localStorage.setItem('cartList', JSON.stringify(cartList));
             })
 
             //清空按钮
